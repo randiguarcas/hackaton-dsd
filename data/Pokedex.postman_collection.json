@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "ba9134fd-c7ff-4e12-a95c-a32ab0779bb3",
+		"name": "Pokedex",
+		"description": "This set of API requests collection depicts existed Pokemon library, basic info, abilities, basic stats, habitats, Types, Evolution etc,. This Collection utilizes opensource Poke API.\n\nFor detailed references and help please visit below offilcial link\nhttps://pokeapi.co/docs/v2.html",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "252408",
+		"_collection_link": "https://www.postman.com/eswara-rao/eswara-rao-pandiripalli-s-public-workspace/collection/4mxtu8o/pokedex?action=share&source=collection_link&creator=252408"
+	},
+	"item": [
+		{
+			"name": "Total Pokemon Count & List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						""
+					]
+				},
+				"description": "This reuqest gives total existed pokemon count and list of Pokemon names."
+			},
+			"response": []
+		},
+		{
+			"name": "Total Pokemon List with Pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/?limit=25",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						""
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "25"
+						}
+					]
+				},
+				"description": "Limit reuqest responses of Pokemon list by 25 results per page with pagination."
+			},
+			"response": []
+		},
+		{
+			"name": "Selected Pokemon details by ID or Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/1",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"1"
+					]
+				},
+				"description": "Sample request example to GET required Pokemon details by ID or Name.\n\nhttps://pokeapi.co/api/v2/pokemon/{id | name}\n\nExample:\n#id\n https://pokeapi.co/api/v2/pokemon/1\n#name\n https://pokeapi.co/api/v2/pokemon/bulbasaur\n\nResponse gives Pokemon details like\n. Types\n. Height\n. Weight\n. Abilities\n. Base Stats\n. Moves\n"
+			},
+			"response": []
+		},
+		{
+			"name": "List of Pokemon by Egg group",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/egg-group/monster",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"egg-group",
+						"monster"
+					]
+				},
+				"description": "This request repsonse required egg group related list of Pokemon by ID or Name of Egg group.\n\nEgg group ID Name List for Reference\n\nExisted id and names\n{id name},\n{1  monster},\n{2  water1},\n{3  bug},\n{4  flying},\n{5  ground},\n{6  fairy},\n{7  plant},\n{8  humanshape},\n{9  water3},\n{10 mineral},\n{11 indeterminate},\n{12 water2},\n{13 ditto},\n{14 dragon},\n{15 no-eggs}"
+			},
+			"response": []
+		},
+		{
+			"name": "Required Pokemon Species",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon-species/bulbasaur",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon-species",
+						"bulbasaur"
+					]
+				},
+				"description": "This request responses Pokemon species contains color, egg_group, evolution chain of selected Pokemon."
+			},
+			"response": []
+		},
+		{
+			"name": "List of Pokemon by Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/type/normal",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"type",
+						"normal"
+					]
+				},
+				"description": "This request responses list of Pokemon by thier type like Normal Pokemon, Grass and Poision Type Pokemon."
+			},
+			"response": []
+		},
+		{
+			"name": "Gender type of Pokemon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/gender/?name=bulbasaur",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"gender",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "bulbasaur"
+						}
+					]
+				},
+				"description": "With this request we know gender type of required Pokemon as response.\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Pokemon Species by Colour",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon-color/green",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon-color",
+						"green"
+					]
+				},
+				"description": "This request response Existed Pokemon Species by colour type."
+			},
+			"response": []
+		},
+		{
+			"name": "Pokemon Species by Shape",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon-shape/tentacles",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon-shape",
+						"tentacles"
+					]
+				},
+				"description": "This request response existed Pokemon list by shape."
+			},
+			"response": []
+		},
+		{
+			"name": "Pokemon Species by Speed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/growth-rate/medium-slow",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"growth-rate",
+						"medium-slow"
+					]
+				},
+				"description": "This request response list of Pokemon by selected speed option."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
